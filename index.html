@@ -24,8 +24,15 @@
             display: flex;
             align-items: center;
         }
+        /* Tamaño del logo por defecto para móviles */
         .navbar-brand img {
             height: 40px;
+        }
+        /* Ajuste del logo para pantallas más grandes */
+        @media (min-width: 768px) {
+            .navbar-brand img {
+                height: 180px; /* Ajusta el tamaño que prefieras para pantallas grandes */
+            }
         }
         .hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/IMG_1366\ 1.png');
@@ -51,6 +58,17 @@
             margin-bottom: 0;
             text-align: left;
         }
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .hero-content {
+                padding: 15px;
+            }
+            .btn-primary {
+                padding: 8px 20px;
+            }
+        }
         .btn-primary {
             background-color: #9370DB;
             border: none;
@@ -70,6 +88,14 @@
         .service-icon {
             font-size: 3rem;
             margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            .service-icon {
+                font-size: 2rem;
+            }
+            .service-card {
+                padding: 15px;
+            }
         }
         #themeToggle {
             cursor: pointer;
@@ -98,7 +124,7 @@
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#">
-                <img src="img/image-removebg-preview.png" alt="ATEX IT Logo" class="img-fluid" style="width: 300px; height: auto;">
+                <img src="img/image-removebg-preview.png" alt="ATEX IT Logo" class="img-fluid">
             </a>
             <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
                 <span class="navbar-toggler-icon"></span>
