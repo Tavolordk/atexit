@@ -1,0 +1,187 @@
+<html lang="es"></html>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>ATEX IT - Digital &amp; Technologies Solutions</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <script src="https://kit.fontawesome.com/c03f6fc474.js" crossorigin="anonymous"></script>
+    <link rel="icon" href="img/image-removebg-preview-1.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: #1e1e1e;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .navbar {
+            background-color: #1E1E1E !important;
+            transition: background-color 0.3s;
+        }
+        .navbar-brand, .nav-link {
+            color: white !important;
+        }
+        .navbar-brand {
+            display: flex;
+            align-items: center;
+        }
+        .navbar-brand img {
+            height: 40px;
+        }
+        .hero {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/IMG_1366\ 1.png');
+            background-size: cover;
+            background-position: center;
+            height: 90vh;
+            position: relative;
+            transition: background-image 0.3s;
+        }
+        .hero-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(30, 30, 30, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 0;
+            text-align: left;
+        }
+        .btn-primary {
+            background-color: #9370DB;
+            border: none;
+            padding: 10px 30px;
+        }
+        .services {
+            background-color: #1e1e1e;
+            transition: background-color 0.3s;
+        }
+        .service-card {
+            background-color: #9370DB;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            height: 100%;
+        }
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+        #themeToggle {
+            cursor: pointer;
+        }
+        .light-mode {
+            background-color: #ffffff;
+        }
+        .light-mode .navbar {
+            background-color: #1E1E1E !important;
+        }
+        .light-mode .navbar-brand, .light-mode .nav-link {
+            color: white !important;
+        }
+        .light-mode .hero {
+            background-image: url('https://www.showmetech.com.br/wp-content/uploads//2022/04/papel-de-parede-animado-no-pc-showmetech-2-2-1920x1024.png.webp');
+        }
+        .light-mode .services {
+            background-color: #ffffff;
+        }
+        .light-mode .hero-content, .light-mode .services {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="img/image-removebg-preview.png" alt="ATEX IT Logo" class="img-fluid" style="width: 300px; height: auto;">
+            </a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">INICIO</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SERVICIOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">SOBRE NOSOTROS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">CONTACTANOS</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="themeToggle">
+                            <i class="fas fa-moon"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section class="hero">
+        <div class="container hero-content">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-8">
+                    <h1>LA MEJOR OPCIÓN PARA CREAR Y MODERNIZAR TU PÁGINA WEB</h1>
+                </div>
+                <div class="col-md-3 text-md-end">
+                    <button class="btn btn-primary mt-3 mt-md-0">CONTÁCTANOS</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="services py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-4">
+                    <div class="service-card">
+                        <i class="fab fa-figma service-icon"></i>
+                        <h5>DISEÑO Y MAQUETADO DE PÁGINAS</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-code service-icon"></i>
+                        <h5>DESARROLLO DE PÁGINAS WEB DESDE CERO</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="service-card">
+                        <i class="fab fa-facebook-f service-icon"></i>
+                        <h5>ASESORIA Y SERVICIO DE MEJORA PARA REDES SOCIALES</h5>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="service-card">
+                        <i class="fas fa-globe service-icon"></i>
+                        <h5>CURSOS DE DESARROLLO WEB Y PROGRAMACIÓN</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('themeToggle').addEventListener('click', function(e) {
+            e.preventDefault();
+            document.body.classList.toggle('light-mode');
+            const icon = this.querySelector('i');
+            if (document.body.classList.contains('light-mode')) {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            } else {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            }
+        });
+    </script>
+</body>
+</html>
