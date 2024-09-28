@@ -8,56 +8,72 @@
     <meta name="robots" content="index, follow"/>
     <meta name="googlebot" content="index, follow"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>ATEX IT - Digital &amp; Technologies Solutions</title>
+    <title>ATEX IT - Digital & Technologies Solutions</title>
     <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/c03f6fc474.js" crossorigin="anonymous"></script>
     <link rel="icon" href="img/DALL·E-2024-09-27-17.13.ico" type="image/x-icon">
     <style>
         /* Reset general */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box; /* Asegura que el padding y los bordes no afecten el tamaño total del elemento */
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-/* Eliminar padding/margin en elementos comunes */
-body, h1, h2, h3, h4, h5, h6, p, ul, ol, nav, section, div {
-    margin: 0;
-    padding: 0;
-}
+        /* Eliminar padding/margin en elementos comunes */
+        body, h1, h2, h3, h4, h5, h6, p, ul, ol, nav, section, div {
+            margin: 0;
+            padding: 0;
+        }
 
+        /* Estilos generales */
         body {
             background-color: #1e1e1e;
             color: white;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
+
+        main {
+            flex: 1; /* Se expande para llenar el espacio disponible */
+        }
+
         .navbar {
             background-color: #1E1E1E !important;
             transition: background-color 0.3s;
         }
+
         .navbar-brand, .nav-link {
             color: white !important;
         }
+
         .navbar-brand {
             display: flex;
             align-items: center;
         }
+
         .navbar-brand img {
             height: 40px;
         }
+
         /* Tamaño del logo más grande en pantallas grandes */
         @media (min-width: 768px) {
             .navbar-brand img {
                 height: 80px;
             }
         }
+
         .navbar-toggler {
             border-color: white;
         }
+
         .navbar-toggler-icon {
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
         }
+
         .hero {
             background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('img/IMG_1366\ 1.png');
             background-size: cover;
@@ -66,6 +82,7 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, nav, section, div {
             position: relative;
             transition: background-image 0.3s;
         }
+
         .hero-content {
             position: absolute;
             top: 50%;
@@ -76,32 +93,39 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, nav, section, div {
             border-radius: 10px;
             width: 90%;
         }
+
         .hero h1 {
             font-size: 2.5rem;
             font-weight: bold;
             margin-bottom: 0;
             text-align: left;
         }
+
         @media (max-width: 768px) {
             .hero h1 {
                 font-size: 1.8rem;
             }
+
             .hero-content {
                 padding: 15px;
             }
+
             .btn-primary {
                 padding: 8px 20px;
             }
         }
+
         .btn-primary {
             background-color: #9370DB;
             border: none;
             padding: 10px 30px;
         }
+
         .services {
             background-color: #1e1e1e;
             transition: background-color 0.3s;
         }
+
         .service-card {
             background-color: #9370DB;
             border-radius: 15px;
@@ -109,235 +133,272 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol, nav, section, div {
             text-align: center;
             height: 100%;
         }
+
         .service-icon {
             font-size: 3rem;
             margin-bottom: 15px;
         }
+
         @media (max-width: 768px) {
             .service-icon {
                 font-size: 2rem;
             }
+
             .service-card {
                 padding: 15px;
             }
         }
+
         #themeToggle {
             cursor: pointer;
         }
+
+        /* Modo Claro */
         .light-mode {
             background-color: #ffffff;
         }
+
         .light-mode .navbar {
             background-color: #1E1E1E !important;
         }
+
         .light-mode .navbar-brand, .light-mode .nav-link {
             color: white !important;
         }
+
         .light-mode .hero {
             background-image: url('https://www.showmetech.com.br/wp-content/uploads//2022/04/papel-de-parede-animado-no-pc-showmetech-2-2-1920x1024.png.webp');
         }
+
         .light-mode .services {
+            background-color: #f8f9fa;
+            color: #1e1e1e;
+        }
+
+        .light-mode #sobre-nosotros {
+            background-color: #f8f9fa;
+            color: #1e1e1e;
+        }
+
+        .service-card.light-mode {
             background-color: #ffffff;
+            color: #1e1e1e;
+            border: 1px solid #dddddd;
         }
-        .light-mode .hero-content, .light-mode .services {
+
+        .service-card.light-mode:hover {
+            background-color: #e0e0e0;
+            color: #1e1e1e;
+        }
+
+        footer {
+            background-color: #1e1e1e;
             color: white;
+            padding: 20px 0;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            position: relative;
         }
-    /* Estilos para la primera tarjeta */
-    .service-card-1 {
-        background-color: #9370DB;
-        border-radius: 15px;
-        padding: 20px;
-        text-align: justify;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        cursor: pointer;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
 
-    .service-card-1:hover {
-        background-color: #6a51b2;
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+        footer.light-mode {
+            background-color: #f8f9fa;
+            color: #1e1e1e;
+        }
 
-    .service-description-1 {
-        opacity: 0;
-        max-height: 0;
-        text-align: justify;
-        transition: opacity 0.5s ease, max-height 0.5s ease;
-        overflow: hidden;
-    }
+        footer h5 {
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: bold;
+        }
 
-    .service-card-1:hover .service-description-1 {
-        opacity: 1;
-        max-height: 300px;
-    }
+        footer p, footer ul, footer li {
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
 
-    /* Estilos para la segunda tarjeta */
-    .service-card-2 {
-        background-color: #9370DB;
-        border-radius: 15px;
-        padding: 20px;
-        text-align: justify;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        cursor: pointer;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+        footer a {
+            color: white;
+            transition: color 0.3s ease;
+        }
 
-    .service-card-2:hover {
-        background-color: #5d4ca8;
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+        footer a:hover {
+            color: #9370DB;
+        }
 
-    .service-description-2 {
-        opacity: 0;
-        max-height: 0;
-        text-align: justify;
-        transition: opacity 0.5s ease, max-height 0.5s ease;
-        overflow: hidden;
-    }
+        footer .fa-2x {
+            font-size: 1.5rem;
+            transition: color 0.3s ease;
+        }
 
-    .service-card-2:hover .service-description-2 {
-        opacity: 1;
-        max-height: 300px;
-    }
+        footer .fa-2x:hover {
+            color: #9370DB;
+        }
 
-    /* Estilos para la tercera tarjeta */
-    .service-card-3 {
-        background-color: #9370DB;
-        border-radius: 15px;
-        padding: 20px;
-        text-align: justify;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        cursor: pointer;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+        footer .row {
+            margin-bottom: 1.5rem;
+        }
 
-    .service-card-3:hover {
-        background-color: #4f3f96;
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+        footer .list-unstyled {
+            padding-left: 0;
+            list-style-type: none;
+        }
 
-    .service-description-3 {
-        opacity: 0;
-        max-height: 0;
-        text-align: justify;
-        transition: opacity 0.5s ease, max-height 0.5s ease;
-        overflow: hidden;
-    }
+        footer .list-unstyled li {
+            margin-bottom: 0.7rem;
+        }
 
-    .service-card-3:hover .service-description-3 {
-        opacity: 1;
-        max-height: 300px;
-    }
+        footer .text-md-start {
+            text-align: left;
+        }
 
-    /* Estilos para la cuarta tarjeta */
-    .service-card-4 {
-        background-color: #9370DB;
-        border-radius: 15px;
-        padding: 20px;
-        text-align: justify;
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-        cursor: pointer;
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-    }
+        footer .text-md-end {
+            text-align: right;
+        }
 
-    .service-card-4:hover {
-        background-color: #443589;
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-    }
+        footer .text-md-start .fa {
+            margin-right: 15px;
+        }
 
-    .service-description-4 {
-        opacity: 0;
-        max-height: 0;
-        text-align: justify;
-        transition: opacity 0.5s ease, max-height 0.5s ease;
-        overflow: hidden;
-    }
+        @media (max-width: 768px) {
+            footer .text-md-start {
+                text-align: center;
+            }
 
-    .service-card-4:hover .service-description-4 {
-        opacity: 1;
-        max-height: 300px;
-    }
-    footer {
-    background-color: #1e1e1e; /* Fondo oscuro para el footer */
-    color: white; /* Texto en color blanco */
+            footer .text-md-end {
+                text-align: center;
+            }
+
+            footer .d-flex {
+                justify-content: center !important;
+            }
+        }
+        /* Estilos para la primera tarjeta */
+.service-card-1 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-footer h5 {
-    font-size: 1.2rem;
-    margin-bottom: 1.2rem;
-    font-weight: bold;
+.service-card-1:hover {
+    background-color: #6a51b2;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer p, footer ul, footer li {
-    font-size: 0.9rem;
-    line-height: 1.7;
+.service-description-1 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
 }
 
-footer a {
-    color: white;
-    transition: color 0.3s ease;
+.service-card-1:hover .service-description-1 {
+    opacity: 1;
+    max-height: 300px;
 }
 
-footer a:hover {
-    color: #9370DB; /* Efecto hover en los enlaces */
+/* Estilos para la segunda tarjeta */
+.service-card-2 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-footer .fa-2x {
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
+.service-card-2:hover {
+    background-color: #5d4ca8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer .fa-2x:hover {
-    color: #9370DB; /* Efecto hover en los iconos de redes sociales */
+.service-description-2 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
 }
 
-footer .row {
-    margin-bottom: 1.5rem; /* Espaciado entre las filas del footer */
+.service-card-2:hover .service-description-2 {
+    opacity: 1;
+    max-height: 300px;
 }
 
-footer .list-unstyled {
-    padding-left: 0;
-    list-style-type: none;
+/* Estilos para la tercera tarjeta */
+.service-card-3 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-footer .list-unstyled li {
-    margin-bottom: 0.7rem;
+.service-card-3:hover {
+    background-color: #4f3f96;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
-footer .text-md-start {
-    text-align: left;
+.service-description-3 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
 }
 
-footer .text-md-end {
-    text-align: right;
+.service-card-3:hover .service-description-3 {
+    opacity: 1;
+    max-height: 300px;
 }
 
-footer .text-md-start .fa {
-    margin-right: 15px;
+/* Estilos para la cuarta tarjeta */
+.service-card-4 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-@media (max-width: 768px) {
-    footer .text-md-start {
-        text-align: center;
-    }
-    footer .text-md-end {
-        text-align: center;
-    }
-    footer .d-flex {
-        justify-content: center !important;
-    }
+.service-card-4:hover {
+    background-color: #443589;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-description-4 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card-4:hover .service-description-4 {
+    opacity: 1;
+    max-height: 300px;
 }
 
     </style>
@@ -374,158 +435,145 @@ footer .text-md-start .fa {
             </div>
         </div>
     </nav>
-    <section id="inicio" class="hero">
-        <div class="container hero-content">
-            <div class="row align-items-center justify-content-between">
-                <div class="col-md-8">
-                    <h1>LA MEJOR OPCIÓN PARA CREAR Y MODERNIZAR TU PÁGINA WEB</h1>
-                </div>
-                <div class="col-md-3 text-md-end">
-                    <a href="https://wa.me/525588057944" class="btn btn-primary mt-3 mt-md-0">CONTÁCTANOS</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <section id="servicios" class="services py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Nuestros Servicios</h2>
-            <div class="row g-4">
-                <div class="col-md-3 mb-4 service-card-1">
-                    <div class="text-center">
-                        <i class="fab fa-figma service-icon"></i>
-                        <h5>Diseño y Maquetado de Páginas</h5>
-                        <p class="service-description-1">Transforma tu presencia online con diseños personalizados y visualmente atractivos que capturan la esencia de tu marca. Creamos páginas web que se adaptan a cualquier dispositivo, asegurando una experiencia de usuario excepcional.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4 service-card-2">
-                    <div class="text-center">
-                        <i class="fas fa-code service-icon"></i>
-                        <h5>Desarrollo de Páginas Web desde Cero</h5>
-                        <p class="service-description-2">Desarrollamos sitios web totalmente funcionales, modernos y seguros, personalizados según tus necesidades. Ya sea un sitio corporativo, tienda en línea o blog, construimos plataformas escalables y fáciles de gestionar.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4 service-card-3">
-                    <div class="text-center">
-                        <i class="fab fa-facebook-f service-icon"></i>
-                        <h5>Asesoría y Mejora para Redes Sociales</h5>
-                        <p class="service-description-3">Potencia tu presencia en redes sociales con estrategias de contenido y optimización de perfiles que atraen más clientes. Con nuestro asesoramiento, logra un mayor alcance y una imagen coherente en todas las plataformas digitales.</p>
-                    </div>
-                </div>
-                <div class="col-md-3 mb-4 service-card-4">
-                    <div class="text-center">
-                        <i class="fas fa-globe service-icon"></i>
-                        <h5>Cursos de Desarrollo Web y Programación</h5>
-                        <p class="service-description-4">¿Te interesa aprender a desarrollar páginas web? Ofrecemos cursos personalizados que te guiarán desde los conceptos básicos hasta el desarrollo de proyectos avanzados. Aprende a programar con las mejores prácticas del mercado.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-        
-    <!-- Sección sobre nosotros -->
-    <section id="sobre-nosotros" class="py-5">
-        <div class="container">
-            <h2 class="text-center mb-5">Sobre Nosotros</h2>
-            <p class="text-center">
-                En ATEX IT somos expertos en soluciones tecnológicas y digitales. Nuestro equipo está comprometido en ofrecer 
-                servicios de desarrollo web, optimización de redes sociales, y formación en programación. Nuestro objetivo es 
-                impulsar el éxito digital de tu empresa o proyecto.
-            </p>
-        </div>
-    </section>
 
-    <!-- Sección de contacto -->
-    <section id="contactanos" class="py-5 bg-dark text-white">
+    <main>
+        <section id="inicio" class="hero">
+            <div class="container hero-content">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-md-8">
+                        <h1>LA MEJOR OPCIÓN PARA CREAR Y MODERNIZAR TU PÁGINA WEB</h1>
+                    </div>
+                    <div class="col-md-3 text-md-end">
+                        <a href="https://wa.me/525588057944" class="btn btn-primary mt-3 mt-md-0">CONTÁCTANOS</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="servicios" class="services py-5 dark-mode">
+            <div class="container">
+                <h2 class="text-center mb-5">Nuestros Servicios</h2>
+                <div class="row g-4">
+                    <div class="col-md-3 mb-4 service-card-1 dark-mode">
+                        <div class="text-center">
+                            <i class="fab fa-figma service-icon"></i>
+                            <h5>Diseño y Maquetado de Páginas</h5>
+                            <p class="service-description-1">Transforma tu presencia online con diseños personalizados y visualmente atractivos que capturan la esencia de tu marca. Creamos páginas web que se adaptan a cualquier dispositivo, asegurando una experiencia de usuario excepcional.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 service-card-2 dark-mode">
+                        <div class="text-center">
+                            <i class="fas fa-code service-icon"></i>
+                            <h5>Desarrollo de Páginas Web desde Cero</h5>
+                            <p class="service-description-2">Desarrollamos sitios web totalmente funcionales, modernos y seguros, personalizados según tus necesidades. Ya sea un sitio corporativo, tienda en línea o blog, construimos plataformas escalables y fáciles de gestionar.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 service-card-3 dark-mode">
+                        <div class="text-center">
+                            <i class="fab fa-facebook-f service-icon"></i>
+                            <h5>Asesoría y Mejora para Redes Sociales</h5>
+                            <p class="service-description-3">Potencia tu presencia en redes sociales con estrategias de contenido y optimización de perfiles que atraen más clientes. Con nuestro asesoramiento, logra un mayor alcance y una imagen coherente en todas las plataformas digitales.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 mb-4 service-card-4 dark-mode">
+                        <div class="text-center">
+                            <i class="fas fa-globe service-icon"></i>
+                            <h5>Cursos de Desarrollo Web y Programación</h5>
+                            <p class="service-description-4">¿Te interesa aprender a desarrollar páginas web? Ofrecemos cursos personalizados que te guiarán desde los conceptos básicos hasta el desarrollo de proyectos avanzados. Aprende a programar con las mejores prácticas del mercado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-nosotros" class="py-5 dark-mode">
+            <div class="container">
+                <h2 class="text-center mb-5">Sobre Nosotros</h2>
+                <p class="text-center">
+                    En ATEX IT somos expertos en soluciones tecnológicas y digitales. Nuestro equipo está comprometido en ofrecer 
+                    servicios de desarrollo web, optimización de redes sociales, y formación en programación. Nuestro objetivo es 
+                    impulsar el éxito digital de tu empresa o proyecto.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer pt-5 dark-mode">
         <div class="container">
-            <h2 class="text-center mb-5">Contáctanos</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6 text-center">
-                    <p>¿Tienes preguntas o necesitas ayuda con tus proyectos digitales?</p>
-                    <a href="https://wa.me/525588057944" class="btn btn-primary">Habla con nosotros en WhatsApp</a>
-                    <p class="mt-3">O envíanos un correo a <a href="mailto:info@atex-it.com" class="text-white">info@atex-it.com</a></p>
+            <div class="row">
+                <!-- Sección de Información de la Empresa -->
+                <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
+                    <a href="#inicio">
+                        <img src="img/image-removebg-preview.png" alt="ATEX IT Logo" style="height: 200px;">
+                    </a>
+                    <p class="mt-3">Soluciones digitales y tecnológicas avanzadas para tu empresa. Creemos en la innovación y en el crecimiento digital de nuestros clientes.</p>
+                </div>
+                <!-- Sección de Enlaces Rápidos -->
+                <div class="col-md-2 text-center text-md-start mb-4 mb-md-0">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#inicio" class="text-decoration-none">Inicio</a></li>
+                        <li><a href="#servicios" class="text-decoration-none">Servicios</a></li>
+                        <li><a href="#sobre-nosotros" class="text-decoration-none">Sobre Nosotros</a></li>
+                        <li><a href="#contactanos" class="text-decoration-none">Contáctanos</a></li>
+                    </ul>
+                </div>
+                <!-- Sección de Contacto -->
+                <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
+                    <h5>Contáctanos</h5>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="https://wa.me/525588057944" class="text-decoration-none">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:atex.it.solutions.mx@gmail.com" class="text-decoration-none">
+                                <i class="fas fa-envelope me-2"></i> Correo
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com/ATEXIT" class="text-decoration-none">
+                                <i class="fab fa-facebook-f me-2"></i> Facebook
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Sección de Redes Sociales -->
+                <div class="col-md-3 text-center text-md-start">
+                    <h5>Síguenos</h5>
+                    <div class="d-flex justify-content-md-start justify-content-center">
+                        <a href="https://www.facebook.com/ATEXIT" class="me-3">
+                            <i class="fab fa-facebook-f fa-2x"></i>
+                        </a>
+                        <a href="https://wa.me/525588057944" class="me-3">
+                            <i class="fab fa-whatsapp fa-2x"></i>
+                        </a>
+                        <a href="https://www.linkedin.com" class="me-3">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="https://www.instagram.com">
+                            <i class="fab fa-instagram fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col text-center">
+                    <p class="mb-0">&copy; 2024 ATEX IT - Todos los derechos reservados</p>
                 </div>
             </div>
         </div>
-    </section>
-
-<!-- Footer Moderno con el Logo -->
-<footer class="footer pt-5">
-    <div class="container">
-        <div class="row">
-            <!-- Sección de Información de la Empresa -->
-            <div class="col-md-4 text-center text-md-start mb-4 mb-md-0">
-                <a href="#inicio">
-                    <img src="img/image-removebg-preview.png" alt="ATEX IT Logo" style="height: 200px;">
-                </a>
-                <p class="mt-3">Soluciones digitales y tecnológicas avanzadas para tu empresa. Creemos en la innovación y en el crecimiento digital de nuestros clientes.</p>
-            </div>
-            <!-- Sección de Enlaces Rápidos -->
-            <div class="col-md-2 text-center text-md-start mb-4 mb-md-0">
-                <h5>Enlaces</h5>
-                <ul class="list-unstyled">
-                    <li><a href="#inicio" class="text-decoration-none">Inicio</a></li>
-                    <li><a href="#servicios" class="text-decoration-none">Servicios</a></li>
-                    <li><a href="#sobre-nosotros" class="text-decoration-none">Sobre Nosotros</a></li>
-                    <li><a href="#contactanos" class="text-decoration-none">Contáctanos</a></li>
-                </ul>
-            </div>
-            <!-- Sección de Contacto -->
-            <div class="col-md-3 text-center text-md-start mb-4 mb-md-0">
-                <h5>Contáctanos</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="https://wa.me/525588057944" class="text-decoration-none">
-                            <i class="fab fa-whatsapp me-2"></i> WhatsApp
-                        </a>
-                    </li>
-                    <li>
-                        <a href="mailto:info@atex-it.com" class="text-decoration-none">
-                            <i class="fas fa-envelope me-2"></i> Correo
-                        </a>
-                    </li>
-                    <li>
-                        <a href="https://www.facebook.com/ATEXIT" class="text-decoration-none">
-                            <i class="fab fa-facebook-f me-2"></i> Facebook
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!-- Sección de Redes Sociales -->
-            <div class="col-md-3 text-center text-md-start">
-                <h5>Síguenos</h5>
-                <div class="d-flex justify-content-md-start justify-content-center">
-                    <a href="https://www.facebook.com/ATEXIT" class="me-3">
-                        <i class="fab fa-facebook-f fa-2x"></i>
-                    </a>
-                    <a href="https://wa.me/525588057944" class="me-3">
-                        <i class="fab fa-whatsapp fa-2x"></i>
-                    </a>
-                    <a href="https://www.linkedin.com" class="me-3">
-                        <i class="fab fa-linkedin fa-2x"></i>
-                    </a>
-                    <a href="https://www.instagram.com">
-                        <i class="fab fa-instagram fa-2x"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Línea de Derechos Reservados -->
-        <div class="row mt-4">
-            <div class="col text-center">
-                <p class="mb-0">&copy; 2024 ATEX IT - Todos los derechos reservados</p>
-            </div>
-        </div>
-    </div>
-</footer>
+    </footer>
 
     <script crossorigin="anonymous" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
         document.getElementById('themeToggle').addEventListener('click', function(e) {
             e.preventDefault();
             document.body.classList.toggle('light-mode');
+            document.body.classList.toggle('dark-mode');
+            
             const icon = this.querySelector('i');
             if (document.body.classList.contains('light-mode')) {
                 icon.classList.remove('fa-moon');
