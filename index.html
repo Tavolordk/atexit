@@ -437,6 +437,71 @@
     background-color: #e0e0e0; /* Hover en gris suave */
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
+/* Estilos generales para las tarjetas */
+.service-card {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 1;
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Solo afecta a la tarjeta en hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h5 {
+    font-size: 1.25rem;
+}
+
+.service-description {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card:hover .service-description {
+    opacity: 1;
+    max-height: 300px;
+}
+
+/* Asegurar que el contenedor crezca uniformemente */
+.col-md-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+/* Cambiar el tamaño de los iconos */
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+/* Light Mode */
+.light-mode .service-card {
+    background-color: #f8f9fa;
+    color: #1e1e1e;
+}
+
+.light-mode .service-card:hover {
+    background-color: #e0e0e0;
+    color: #1e1e1e;
+}
 
     </style>
 </head>
@@ -490,39 +555,43 @@
         <section id="servicios" class="services py-5 dark-mode">
             <div class="container">
                 <h2 class="text-center mb-5">Nuestros Servicios</h2>
-                <div class="row g-4">
-                    <div class="col-md-3 mb-4 service-card-1 dark-mode">
-                        <div class="text-center">
+                <div class="row justify-content-center">
+                    <!-- Tarjeta 1 -->
+                    <div class="col-md-2 m-4 d-flex">
+                        <div class="service-card service-card-1 dark-mode w-100 text-center p-4">
                             <i class="fab fa-figma service-icon"></i>
                             <h5>Diseño y Maquetado de Páginas</h5>
-                            <p class="service-description-1">Transforma tu presencia online con diseños personalizados y visualmente atractivos que capturan la esencia de tu marca. Creamos páginas web que se adaptan a cualquier dispositivo, asegurando una experiencia de usuario excepcional.</p>
+                            <p class="service-description">Transforma tu presencia online con diseños personalizados y visualmente atractivos que capturan la esencia de tu marca.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4 service-card-2 dark-mode">
-                        <div class="text-center">
+                    <!-- Tarjeta 2 -->
+                    <div class="col-md-2 m-4 d-flex">
+                        <div class="service-card service-card-2 dark-mode w-100 text-center p-4">
                             <i class="fas fa-code service-icon"></i>
                             <h5>Desarrollo de Páginas Web desde Cero</h5>
-                            <p class="service-description-2">Desarrollamos sitios web totalmente funcionales, modernos y seguros, personalizados según tus necesidades. Ya sea un sitio corporativo, tienda en línea o blog, construimos plataformas escalables y fáciles de gestionar.</p>
+                            <p class="service-description">Desarrollamos sitios web totalmente funcionales, modernos y seguros, personalizados según tus necesidades.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4 service-card-3 dark-mode">
-                        <div class="text-center">
+                    <!-- Tarjeta 3 -->
+                    <div class="col-md-2 m-4 d-flex">
+                        <div class="service-card service-card-3 dark-mode w-100 text-center p-4">
                             <i class="fab fa-facebook-f service-icon"></i>
                             <h5>Asesoría y Mejora para Redes Sociales</h5>
-                            <p class="service-description-3">Potencia tu presencia en redes sociales con estrategias de contenido y optimización de perfiles que atraen más clientes. Con nuestro asesoramiento, logra un mayor alcance y una imagen coherente en todas las plataformas digitales.</p>
+                            <p class="service-description">Potencia tu presencia en redes sociales con estrategias de contenido y optimización de perfiles que atraen más clientes.</p>
                         </div>
                     </div>
-                    <div class="col-md-3 mb-4 service-card-4 dark-mode">
-                        <div class="text-center">
+                    <!-- Tarjeta 4 -->
+                    <div class="col-md-2 m-4 d-flex">
+                        <div class="service-card service-card-4 dark-mode w-100 text-center p-4">
                             <i class="fas fa-globe service-icon"></i>
                             <h5>Cursos de Desarrollo Web y Programación</h5>
-                            <p class="service-description-4">¿Te interesa aprender a desarrollar páginas web? Ofrecemos cursos personalizados que te guiarán desde los conceptos básicos hasta el desarrollo de proyectos avanzados. Aprende a programar con las mejores prácticas del mercado.</p>
+                            <p class="service-description">Ofrecemos cursos personalizados que te guiarán desde los conceptos básicos hasta el desarrollo de proyectos avanzados.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
+        
         <section id="sobre-nosotros" class="py-5 dark-mode">
             <div class="container">
                 <h2 class="text-center mb-5">Sobre Nosotros</h2>
