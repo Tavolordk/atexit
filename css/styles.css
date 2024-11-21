@@ -1,0 +1,502 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+nav,
+section,
+div {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1e1e1e;
+    color: white;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+.navbar {
+    transition: background-color 0.3s ease;
+}
+
+.navbar.scrolled {
+    background-color: #333;
+}
+
+.navbar-brand,
+.nav-link {
+    color: white !important;
+}
+
+.navbar-brand {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-brand img {
+    height: 40px;
+}
+
+@media (min-width: 768px) {
+    .navbar-brand img {
+        height: 80px;
+    }
+}
+
+.navbar-toggler {
+    border-color: white;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='white' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/*  
+    .hero {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)), url('img/IMG_1366\ 1.png');
+        background-size: cover;
+        background-position: center;
+        height: 90vh;
+        position: relative;
+        transition: background-image 0.3s;
+    }
+*/
+
+.hero {
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translate(-50%, -50%);
+}
+
+
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(30, 30, 30, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content {
+        padding: 15px;
+    }
+
+    .btn-primary {
+        padding: 8px 20px;
+    }
+}
+
+.btn-primary {
+    background-color: #9370DB;
+    border: none;
+    padding: 10px 30px;
+}
+
+.services {
+    background-color: #1e1e1e;
+    transition: background-color 0.3s;
+}
+
+.service-card {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    height: 100%;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .service-icon {
+        font-size: 2rem;
+    }
+
+    .service-card {
+        padding: 15px;
+    }
+}
+
+#themeToggle {
+    cursor: pointer;
+}
+
+.light-mode {
+    background-color: #ffffff;
+}
+
+.light-mode .navbar {
+    background-color: #1E1E1E !important;
+}
+
+.light-mode .navbar-brand,
+.light-mode .nav-link {
+    color: white !important;
+}
+
+.light-mode .hero {
+    background-image: url('https://www.showmetech.com.br/wp-content/uploads//2022/04/papel-de-parede-animado-no-pc-showmetech-2-2-1920x1024.png.webp');
+}
+
+.light-mode .services {
+    background-color: #f8f9fa;
+    color: #1e1e1e;
+}
+
+.light-mode #sobre-nosotros {
+    background-color: #f8f9fa;
+    color: #1e1e1e;
+}
+
+.service-card.light-mode {
+    background-color: #ffffff;
+    color: #1e1e1e;
+    border: 1px solid #dddddd;
+}
+
+.service-card.light-mode:hover {
+    background-color: #e0e0e0;
+    color: #1e1e1e;
+}
+
+footer {
+    background-color: #1e1e1e;
+    color: white;
+    padding: 20px 0;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    position: relative;
+}
+
+footer.light-mode {
+    background-color: #f8f9fa;
+    color: #1e1e1e;
+}
+
+footer h5 {
+    font-size: 1.2rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+}
+
+footer p,
+footer ul,
+footer li {
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+footer a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #9370DB;
+}
+
+footer .fa-2x {
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+}
+
+footer .fa-2x:hover {
+    color: #9370DB;
+}
+
+footer .row {
+    margin-bottom: 1.5rem;
+}
+
+footer .list-unstyled {
+    padding-left: 0;
+    list-style-type: none;
+}
+
+footer .list-unstyled li {
+    margin-bottom: 0.7rem;
+}
+
+footer .text-md-start {
+    text-align: left;
+}
+
+footer .text-md-end {
+    text-align: right;
+}
+
+footer .text-md-start .fa {
+    margin-right: 15px;
+}
+
+@media (max-width: 768px) {
+    footer .text-md-start {
+        text-align: center;
+    }
+
+    footer .text-md-end {
+        text-align: center;
+    }
+
+    footer .d-flex {
+        justify-content: center !important;
+    }
+}
+
+.service-card-1 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-1:hover {
+    background-color: #6a51b2;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-description-1 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card-1:hover .service-description-1 {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.service-card-2 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-2:hover {
+    background-color: #5d4ca8;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-description-2 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card-2:hover .service-description-2 {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.service-card-3 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-3:hover {
+    background-color: #4f3f96;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-description-3 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card-3:hover .service-description-3 {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.service-card-4 {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.service-card-4:hover {
+    background-color: #443589;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-description-4 {
+    opacity: 0;
+    max-height: 0;
+    text-align: justify;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card-4:hover .service-description-4 {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.card.dark-mode {
+    background-color: #2c2c2c;
+    color: white;
+    border: 1px solid #444;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card.dark-mode:hover {
+    background-color: #444;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.card.light-mode {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.card.light-mode:hover {
+    background-color: #e0e0e0;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.service-card {
+    background-color: #9370DB;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: justify;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    flex-grow: 1;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h5 {
+    font-size: 1.25rem;
+}
+
+.service-description {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.service-card:hover .service-description {
+    opacity: 1;
+    max-height: 300px;
+}
+
+.col-md-2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+}
+
+.service-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.dark-mode {
+    background-color: #1e1e1e;
+    color: white;
+}
+
+.light-mode .service-card {
+    background-color: #f8f9fa;
+    color: #1e1e1e;
+}
+
+.light-mode .service-card:hover {
+    background-color: #e0e0e0;
+    color: #1e1e1e;
+}
